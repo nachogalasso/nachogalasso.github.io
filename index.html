@@ -31,13 +31,19 @@
 <body>
     <!-- HEADER - NAVBAR START -->
     <header class="header-sticky">
-        <nav class="navbar" id="navbar">
-            <ul class="navbar__list">
+        <div class="toggle-menu" id="toggle-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar__list" id="navbar">
                 <li class="navbar__item"><a href="#welcome-section">About</a></li>
                 <li class="navbar__item"><a href="#main-projects">Work</a></li>
                 <li class="navbar__item"><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
+        <figure class="nav-logo" id="logo">
+            <img src="/assets/Logo_web2.webp" alt="My_Logo">
+        </figure>
     </header>
     <!-- HEADER - NAVBAR END -->
 
@@ -62,14 +68,20 @@
             <h2 class="main__projects-title">Here you can see my work</h2>
             <div class="main__projects-cardcontainer">
                 <figure class="main__projects-card">
-                    <img src="/assets/Login.webp" alt="Login">
+                    <a href="#" title="Comming soon">
+                    <img src="/assets/Surveypage.webp" alt="Survey_page">
+                    <p>Survey Page</p>
+                    </a>
+                </figure>
+                <figure class="main__projects-card">
+                    <img src="/assets/amazon.webp" alt="Amazon Movie Library">
                     <div class="card-item">
-                        <a href="#" title="Comming soon">
-                            <p>Login Page</p>
+                        <a href="https://amazonmovielibrarypractice.netlify.app/" title="Amazon movie gallery" target="_blank" rel="noreferrer">
+                            <p>Amazon Library</p>
                         </a>
                     </div>
                 </figure>
-                <figure class="main__projects-card">
+                <!-- <figure class="main__projects-card">
                     <a href="#" title="Comming soon">
                     <img src="/assets/Tribute_Page.webp" alt="Tribute_Page">
                     <p>Mandela Tribute Page</p>
@@ -86,25 +98,20 @@
                     <img src="/assets/Landing_Page.webp" alt="Landing_Page">
                     <p>Landing Page</p>
                     </a>
-                </figure>
+                </figure> -->
                 <figure class="main__projects-card">
-                    <a href="https://codepen.io/nakio82/pen/jOmEdVy" target="_blank" rel="noreferrer" title="CodePen example">
+                    <a href="https://codepen.io/nakio82/full/jOmEdVy" target="_blank" rel="noreferrer" title="CodePen example">
                     <img src="/assets/Counter.webp" alt="Counter">
                     <p>Counter</p>
                     </a>
                 </figure>
                 <figure class="main__projects-card">
-                    <a href="https://codepen.io/nakio82/pen/NWjpBpY" target="_blank" rel="noreferrer" title="Codepen example">
+                    <a href="https://codepen.io/nakio82/full/NWjpBpY" target="_blank" rel="noreferrer" title="Codepen example">
                     <img src="/assets/BlackJack.webp" alt="BlackJack_JS">
                     <p>BlackJack</p>
                     </a>
                 </figure>
-                <figure class="main__projects-card">
-                    <a href="#" title="Comming soon">
-                    <img src="/assets/survey.webp" alt="Survey_page">
-                    <p>Survey Page</p>
-                    </a>
-                </figure>
+                
                 <figure class="main__projects-card">
                     <img src="/assets/Underconstruction.webp" alt="Underconstruction_Logo">
                     <a href="#" title="Stay tuned!! Bookmark this page">
@@ -139,7 +146,9 @@
 
 <!-- FOOTER START -->
 <footer class="footer__section" id="footer">
-    <p>Todos los derechos reservados 2021 &#174</p>
+    <p>Todos los derechos reservados 2021 &#174;</p>
 </footer>
+
+<script src="/portfolio.js"></script>
 </body>
 </html>
