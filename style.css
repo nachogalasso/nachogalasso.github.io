@@ -1,32 +1,42 @@
 /* =========
      INDEX
    ========= 
-1. RESET values
-2. NAVIGATION BAR
-    2.1 HEADER ON TOP
-    2.2 NAVBAR
-3. WELCOME SECTION
-    3.1 INFO CONTAINER
-    3.2 PHOTO
-    3.3 TEXT STYLE
-4. MAIN PROJECTS
-    4.1 PROJECTS CONTAINER
-    4.2 PROJECT CARDS
-    4.3 PROJECT TEXT
-    4.4 PROJECT BUTTON
-5. CONTACT
-    5.1 CONTACT CONTAINER
-    5.2 CONTACT ICONS
-    5.3 CONTACT STYLE
-6. MEDIA QUERY
-    6.1 TABLET 
-    6.2 DESKTOP */
+1. RESET values - (37)
+2. NAVIGATION BAR - (78)
+    2.1 HEADER ON TOP - (81)
+    2.2 NAVBAR - (94)
+    2.3 NAVBAR MQ - (135)
+    2.4 NAVBAR LOGO / BURGUER BUTTON - (172)
+    2.5 NAVAR LOG MQ - (196)
+3. WELCOME SECTION - (210)
+    3.1 INFO CONTAINER - (216)
+    3.2 PHOTO - (224)
+    3.3 TEXT STYLE - (236)
+    3.4 WELCOME MEDIA QUERYS - (257)
+4. MAIN PROJECTS - (308)
+    4.1 PROJECTS CONTAINER - (314)
+    4.2 PROJECT CARDS - (327)
+    4.3 PROJECT TEXT - (345)
+    4.4 PROJECT BUTTON - (358)
+    4.5 PROJECT MQ - (379)
+    4.6 MODAL - (426)
+    4.7 MODAL BUTTON - (446)
+    4.8 MODAL CARD - (461)
+    4.9 MODAL MQ - (476)
+5. CONTACT - (495)
+    5.1 CONTACT CONTAINER - (502)
+    5.2 CONTACT ICONS - (511)
+    5.3 CONTACT STYLE - (520)
+    5.4 CONTACT MQ - (544)
+6. FOOTER - (577)
+    6.1 FOOTER SECTION - (580)
+    6.2 FOOTER MQ - (591)
 
 
 /* ===========
     1. RESET
    =========== */
-   :root {
+:root {
     --title: 'Ubuntu', Arial, Helvetica, sans-serif;
     --text: 'Lora' , Arial, Helvetica, serif;
     --red: rgba(187,10,33);
@@ -52,6 +62,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    object-fit: contain;
 }
 
 p {
@@ -77,6 +88,7 @@ h1, h2 {
     top: 0;
     z-index: 1;
     background-color: var(--red);
+    box-shadow: -.5rem .3rem 3rem var(--black);
 }
 
 /* 2.2 NAVBAR */
@@ -88,7 +100,7 @@ h1, h2 {
 .navbar__list {
     display: flex;
     padding-left: 0;
-    transform: translateX(-150%);
+    transform: translateX(-250%);
     transition: transform .3s;
     position: absolute;
 }
@@ -104,6 +116,7 @@ h1, h2 {
     list-style-type: none;
     margin: 0;
     padding: 1rem;
+    align-items: center;
 }
 
 .navbar__item a {
@@ -112,7 +125,6 @@ h1, h2 {
     font-family: var(--text);
     font-size: 2em;
     color: #fff;
-    padding-bottom: .15em;
 }
 
 .navbar__item:hover, a:hover {
@@ -120,21 +132,49 @@ h1, h2 {
     color: #00769C;
 }
 
-.navbar__item a:hover {
-    border-bottom: .1em solid #00769C;
+/* 2.3 NAVBAR MEDIA QUERYS */
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .navbar__list {
+        position: relative;
+        transform: translateX(0);
+        transition: transform .3s;
+        flex-grow: 1;
+        margin-left: 1rem;
+    }
+
+    .navbar__item {
+        padding: 5% 2rem;
+    }
+
 }
 
-/* NAVBAR LOGO AND BURGER BUTTON*/
+@media screen and (min-width: 1024px) {
+    .navbar__item a {
+        font-size: 2.7em;
+    }
+
+    .navbar__item:hover, a:hover {
+        border-radius: 1rem;
+    }
+
+    .navbar__item:hover {
+        border-bottom: .4rem solid #00769C;
+    }
+
+}
+
+/* 2.4 NAVBAR LOGO AND BURGER BUTTON*/
 .nav-logo {
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    flex-grow: 1;
-}
-
-.nav-logo img {
-    border-radius: 50%;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 .toggle-menu {
@@ -152,12 +192,25 @@ h1, h2 {
 .logo {
     display: none;
 }
+
+/* 2.5 NAVBAR LOGO MEDIA QUERYS */
+@media screen and (min-width: 768px) {
+    .hide {
+        position: absolute;
+        transform: translateX(-115%);
+        transition: transform .3s;
+    }
+
+    .nav-logo {
+        margin-right: 1rem;
+    }
+}
+
 /* =============
     3. WELCOME
    ============= */
-
 .welcome__section {
-    background-color: var(--grey);
+    background: linear-gradient(180deg, rgba(211,212,217,1) 45%, rgba(75,136,162,1) 98%);
 }
 
 /* 3.1 INFO CONTAINER */
@@ -200,11 +253,62 @@ h1, h2 {
     hyphens: auto;
 }
 
+
+/* 3.4 WELCOME MEDIA QUERYS */
+@media screen and (min-width: 768px) {
+    
+    .welcome__section-container {
+        width: 100%;
+        padding: 2rem 1rem;
+        flex-direction: row;
+    }
+
+    .welcome__section-photo {
+        margin: 0 1rem;
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .welcome__section-name {
+        padding: .5rem;
+    }
+    .welcome__section-name h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .welcome__section-container {
+        height: 100vh;
+    }
+
+    .welcome__section-photo {
+        flex: 0 0 calc(37% - 1rem);
+        opacity: 0.9;
+        align-self: center;
+    }
+
+    .welcome__section-name h1 {
+        font-size: 4.5rem;
+    }
+
+    .welcome__section-name h2 {
+        font-size: 3rem;
+    }
+
+    .welcome__section-name p {
+        font-size: 2.2rem;
+        padding: 0 3rem;
+        line-height: 2;
+        hyphens: none;
+    }
+}
+
 /* ==========
     4. MAIN
    ========== */
 .main__projects {
-    background-color: var(--lightblue);
+    background: linear-gradient(180deg, rgba(75,136,162,1) 45%, rgba(37,38,39,1) 98%);
 }
 
 /* 4.1 PROJECTS CONTAINER */
@@ -224,9 +328,7 @@ h1, h2 {
 .main__projects-cardcontainer {
     display: flex;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-    column-gap: 1rem; */
+    
 }
 
 .main__projects-card {
@@ -262,7 +364,6 @@ h1, h2 {
     border-radius: 1.2em;
     font-weight: bold;
     border: none;
-    box-shadow: .2em .2em 2em #000;
     margin: 2rem 0 2rem;
     font-size: 1.3em;
     transition: transform linear 10ms;
@@ -272,6 +373,122 @@ h1, h2 {
     background-color: var(--black);
     color: var(--red);
     transform: scale(1.1);
+    box-shadow: .2em .2em 2rem var(--grey);
+}
+
+/* 4.5 PROJECT MEDIA QUERYS */
+@media screen and (min-width: 768px) {
+    .main__projects-title {
+        font-size: 2.8em;
+    }
+
+    .main__projects-cardcontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        grid-auto-flow: dense;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        padding: 1rem;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .main__projects-card {
+        margin: 0;
+    }
+
+    .main__projects-card img {
+        object-fit: cover;
+    }
+
+    .amazon {
+        grid-column: 1 / 3;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .main__projects-title {
+        font-size: 4rem;
+    }
+
+    .main__projects-cardcontainer {
+        padding: 1rem 2rem;
+        column-gap: 3rem;
+    }
+
+    .main__projects-button {
+        font-size: 1.8rem;
+    }
+}
+
+/* 4.6 MODAL */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(1rem);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+}
+
+/* 4.7 MODAL BUTTON */
+.close-btn {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--grey);
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--red);
+    transform: scale(1.5);
+}
+
+/* 4.8 MODAL CARD */
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-card img {
+    border-radius: 1rem;
+}
+
+.modal-card p {
+    color: var(--white);
+    text-shadow: 2rem 2rem 2rem var(--black);
+}
+
+/* 4.9 MODAL MEDIA QUERY */
+@media screen and (min-width: 768px) {
+
+    .modal-content {
+        margin: auto;
+    }
+
+    .modal-card img {
+        width: 45%;
+    }
+
+    .close-btn {
+        font-size: 3.2rem;
+        margin: 0 15% 2%;
+    }
+
 }
 
 /* =============
@@ -282,6 +499,7 @@ h1, h2 {
     color: var(--white);
 }
 
+/* 5.1 CONTACT CONTAINER */
 .contact__section-container {
     display: flex;
     flex-direction: column;
@@ -323,9 +541,43 @@ h1, h2 {
     padding-left: .5em;
 }
 
+/* 5.4 CONTACT MEDIA QUERY */
+@media screen and (min-width: 768px) {
+    
+    .contact__section-container {
+        width: 50%;
+    }
+    .contact__section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-item a {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .contact__section-container {
+        width: 75%;
+    }
+
+    .contact__section-title {
+        font-size: 2rem;
+    }
+
+    .contact-item a {
+        font-size: 1.7rem;
+    }
+
+}
+
 /* ============
-    5. FOOTER
+    6. FOOTER
    ============ */
+
+/* 6.1 FOOTER SECTION */
 .footer__section {
     display: flex;
     justify-content: center;
@@ -336,109 +588,11 @@ h1, h2 {
     padding-right: 1em;
 }
 
-/* =================
-    6. MEDIA QUERY
-   ================= */
-
-/* 6.1 TABLET */
-/* @media screen and (min-width:400px) { */
-    
-
-    /* WELCOME STYLE 
-    
-    
-
-
-    /* PROJECTS CONTAINER 
-    .main__projects-container {
-        display: block;
-        text-align: center;
-        border-top: .5em solid var(--black);
-    }
-    
-    .main__projects-title {
-        font-size: 3em;
-        margin: 0 0 2em;
-        padding-top: 1em;
-    }
-    /* PROJECTS CARD CONTAINER 
-    .main__projects-cardcontainer {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-        grid-gap: 4em;
-        width: 90%;
-        max-width: 110rem;
-        margin: 0 auto;
-    } 
-    
-    /* PROJECTS CARDS 
-    .main__projects-card {
-        margin: 0;
-    }
-    /* BUTTON 
-    .main__projects-button {
-        margin: 3em auto;
-        width: 12em;
-        font-size: 1.8em;
-        padding: .5em;
-    }
-
-    
-}
-
-/* 6.2 DESKTOP */
-
-/* @media screen and (min-width:769px) { */
-    /* WELCOME STYLE 
-    .welcome__section-container {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        padding: 3rem 1.5rem;
-        align-items: center;
-    }
-
-
-    .welcome__section-photo img {
-        opacity: .9;
-    }
-
-    .welcome__section-name h1 {
-        font-size: 3.5em;
-        padding-bottom: .5em;
-    }
-
-    .welcome__section-name h2 {
-        font-size: 2.8em;
-    }
-
-    .welcome__section-name p {
-        padding-left: 1.5em;
-        padding-top: 1.5em;
-        line-height: 2.2;
-        hyphens: none;
-    }
-
-    .contact__section-container {
-        width: 100%;
-        padding: 2.5em 0;
-    }
-    .contact__section-title {
-        font-size: 2.5em;
-        word-spacing: .2em;
-    }
-    .contact__section-icons {
-        width: 80%;
-        justify-content: space-evenly;
-    }
-    .contact-item {
-        font-size: 1.5em;
-        flex: 1;
-    }
+/* 6.2 FOOTER MEDIA QUERYS */
+@media screen and (min-width: 1024px) {
 
     .footer__section p {
-        font-size: 1.5em;
+        font-size: 1.3rem;
     }
+
 }
-
-
