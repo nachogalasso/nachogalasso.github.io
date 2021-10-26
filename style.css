@@ -2,35 +2,35 @@
      INDEX
    ========= 
 1. RESET values - (37)
-2. NAVIGATION BAR - (78)
-    2.1 HEADER ON TOP - (81)
-    2.2 NAVBAR - (94)
-    2.3 NAVBAR MQ - (135)
-    2.4 NAVBAR LOGO / BURGUER BUTTON - (172)
-    2.5 NAVAR LOG MQ - (196)
-3. WELCOME SECTION - (210)
-    3.1 INFO CONTAINER - (216)
-    3.2 PHOTO - (224)
-    3.3 TEXT STYLE - (236)
-    3.4 WELCOME MEDIA QUERYS - (257)
-4. MAIN PROJECTS - (308)
-    4.1 PROJECTS CONTAINER - (314)
-    4.2 PROJECT CARDS - (327)
-    4.3 PROJECT TEXT - (345)
-    4.4 PROJECT BUTTON - (358)
-    4.5 PROJECT MQ - (379)
-    4.6 MODAL - (426)
-    4.7 MODAL BUTTON - (446)
-    4.8 MODAL CARD - (461)
-    4.9 MODAL MQ - (476)
-5. CONTACT - (495)
-    5.1 CONTACT CONTAINER - (502)
-    5.2 CONTACT ICONS - (511)
-    5.3 CONTACT STYLE - (520)
-    5.4 CONTACT MQ - (544)
-6. FOOTER - (577)
-    6.1 FOOTER SECTION - (580)
-    6.2 FOOTER MQ - (591)
+2. NAVIGATION BAR - (77)
+    2.1 HEADER ON TOP - (80)
+    2.2 NAVBAR - (93)
+    2.3 NAVBAR MQ - (133)
+    2.4 NAVBAR LOGO / BURGUER BUTTON - (161)
+    2.5 NAVAR LOG MQ - (184)
+3. WELCOME SECTION - (195)
+    3.1 INFO CONTAINER - (201)
+    3.2 PHOTO - (209)
+    3.3 TEXT STYLE - (221)
+    3.4 WELCOME MEDIA QUERYS - (242)
+4. MAIN PROJECTS - (293)
+    4.1 PROJECTS CONTAINER - (299)
+    4.2 PROJECT CARDS - (311)
+    4.3 PROJECT TEXT - (325)
+    4.4 PROJECT BUTTON - (338)
+    4.5 PROJECT MQ - (359)
+    4.6 MODAL - (401)
+    4.7 MODAL BUTTON - (420)
+    4.8 MODAL CARD - (435)
+    4.9 MODAL MQ - (450)
+5. CONTACT - (469)
+    5.1 CONTACT CONTAINER - (476)
+    5.2 CONTACT ICONS - (485)
+    5.3 CONTACT STYLE - (494)
+    5.4 CONTACT MQ - (518)
+6. FOOTER - (551)
+    6.1 FOOTER SECTION - (554)
+    6.2 FOOTER MQ - (565)
 
 
 /* ===========
@@ -62,7 +62,6 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
 }
 
 p {
@@ -93,13 +92,14 @@ h1, h2 {
 
 /* 2.2 NAVBAR */
 .navbar {
-    margin: 0;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar__list {
     display: flex;
-    padding-left: 0;
+    padding: 0;
     transform: translateX(-250%);
     transition: transform .3s;
     position: absolute;
@@ -114,8 +114,6 @@ h1, h2 {
 .navbar__item {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 1rem;
     align-items: center;
 }
 
@@ -144,12 +142,11 @@ h1, h2 {
         position: relative;
         transform: translateX(0);
         transition: transform .3s;
-        flex-grow: 1;
-        margin-left: 1rem;
     }
 
     .navbar__item {
         padding: 5% 2rem;
+        height: 100%;
     }
 
 }
@@ -159,20 +156,11 @@ h1, h2 {
         font-size: 2.7em;
     }
 
-    .navbar__item:hover, a:hover {
-        border-radius: 1rem;
-    }
-
-    .navbar__item:hover {
-        border-bottom: .4rem solid #00769C;
-    }
-
 }
 
 /* 2.4 NAVBAR LOGO AND BURGER BUTTON*/
 .nav-logo {
     display: flex;
-    justify-content: flex-end;
     margin: 0;
     padding: 1rem;
 }
@@ -201,9 +189,6 @@ h1, h2 {
         transition: transform .3s;
     }
 
-    .nav-logo {
-        margin-right: 1rem;
-    }
 }
 
 /* =============
@@ -321,7 +306,6 @@ h1, h2 {
 
 .main__projects-title {
     font-size: 2.2em;
-    margin: .7em 0;
 }
 
 /* 4.2 PROJECTS CARDS */
@@ -332,14 +316,10 @@ h1, h2 {
 }
 
 .main__projects-card {
-    box-shadow: .2em .2em 2em #000;
+    box-shadow: .2rem .2rem 2rem #000;
     background-color: var(--grey);
     border-radius: .5em;
     margin-bottom: 1.5em;
-}
-
-.main__projects-card img {
-    border-radius: .5em;
 }
 
 /* 4.3 PROJECT TEXT */
@@ -383,28 +363,23 @@ h1, h2 {
     }
 
     .main__projects-cardcontainer {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
-        grid-auto-flow: dense;
-        column-gap: 2rem;
-        row-gap: 2rem;
-        padding: 1rem;
-        align-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
     
     .main__projects-card {
-        margin: 0;
+        flex: 0 0 calc(40% - 1rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .main__projects-card img {
-        object-fit: cover;
+    .main__projects-card:hover {
+        box-shadow: .3rem .3rem 3rem #000;
     }
-
-    .amazon {
-        grid-column: 1 / 3;
-    }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -413,14 +388,14 @@ h1, h2 {
         font-size: 4rem;
     }
 
-    .main__projects-cardcontainer {
-        padding: 1rem 2rem;
-        column-gap: 3rem;
+    .main__projects-card {
+        flex: 0 0 calc(25% - 1rem);
     }
 
     .main__projects-button {
         font-size: 1.8rem;
     }
+
 }
 
 /* 4.6 MODAL */
