@@ -13,7 +13,7 @@
     3.2 PHOTO - (209)
     3.3 TEXT STYLE - (221)
     3.4 WELCOME MEDIA QUERYS - (242)
-4. MAIN PROJECTS - (293)
+4. MAIN PROJECTS - (297)
     4.1 PROJECTS CONTAINER - (299)
     4.2 PROJECT CARDS - (311)
     4.3 PROJECT TEXT - (325)
@@ -45,10 +45,20 @@
     --black: rgba(37,38,39);
     --white: rgba(255,249,251);
 }
+
 html {
     font-size: 62.5%; 
     box-sizing: border-box;
+    
 }
+
+html::-webkit-scrollbar {
+    display: none;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -64,9 +74,9 @@ img {
     display: block;
 }
 
-p {
+p, a {
     font-family: var(--text);
-    font-size: 1.8em;
+    font-size: 2rem;
 }
 
 h1, h2 {
@@ -120,12 +130,12 @@ h1, h2 {
 .navbar__item a {
     display: block;
     text-decoration: none;
-    font-family: var(--text);
     font-size: 2em;
     color: #fff;
 }
 
-.navbar__item:hover, a:hover {
+.navbar__item:hover, 
+.navbar__item a:hover {
     background-color: var(--black);
     color: #00769C;
 }
@@ -255,10 +265,13 @@ h1, h2 {
 
     .welcome__section-name {
         padding: .5rem;
+        align-self: center;
     }
+
     .welcome__section-name h1 {
         font-size: 3.2rem;
     }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -287,6 +300,7 @@ h1, h2 {
         line-height: 2;
         hyphens: none;
     }
+
 }
 
 /* ==========
@@ -320,6 +334,8 @@ h1, h2 {
     background-color: var(--grey);
     border-radius: .5em;
     margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 4.3 PROJECT TEXT */
@@ -328,11 +344,19 @@ h1, h2 {
     font-weight: bold;
     font-variant: small-caps;
     padding: 0 .1em;
-    color: #00769C;
 }
 
 .main__projects-card a {
     text-decoration: none;
+    color: #00769C;
+    transition: 0.5s;
+}
+
+.main__projects-card a:hover {
+    background-color: var(--lightblue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 /* 4.4 PROJECT BUTTON */
