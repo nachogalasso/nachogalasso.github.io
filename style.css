@@ -41,7 +41,7 @@
     --text: 'Lora' , Arial, Helvetica, serif;
     --red: rgba(187,10,33);
     --grey: rgba(211,212,217);
-    --lightblue: rgba(75,136,162);
+    --lightblue: rgba(75,136,162,.5);
     --black: rgba(37,38,39);
     --white: rgba(255,249,251);
 }
@@ -96,7 +96,8 @@ h1, h2 {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: var(--red);
+    background-color: rgba(187, 10, 33, .7);
+    backdrop-filter: blur(2.2rem);
     box-shadow: -.5rem .3rem 3rem var(--black);
 }
 
@@ -136,8 +137,7 @@ h1, h2 {
 
 .navbar__item:hover, 
 .navbar__item a:hover {
-    background-color: var(--black);
-    color: #00769C;
+    color: var(--black);
 }
 
 /* 2.3 NAVBAR MEDIA QUERYS */
@@ -205,7 +205,7 @@ h1, h2 {
     3. WELCOME
    ============= */
 .welcome__section {
-    background: linear-gradient(180deg, rgba(211,212,217,1) 45%, rgba(75,136,162,1) 98%);
+    /* background: linear-gradient(180deg, rgba(211,212,217,1) 45%, rgba(75,136,162,1) 98%); */
 }
 
 /* 3.1 INFO CONTAINER */
@@ -221,11 +221,13 @@ h1, h2 {
     padding: 1em;
     margin: 2.5em 0;
     align-self: center;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 35%, rgba(9,9,121,1) 100%);
+    border-radius: 17% 83% 24% 76% / 61% 79% 21% 39%;
 }
 
 .welcome__section-photo img {
-    border-radius: 50%;
-    box-shadow: .1rem .1rem 3rem black;
+    border-radius: 2rem;
+    filter: drop-shadow(.1rem .1rem 3rem black);
 }
 
 /* 3.3 TEXT STYLE */
@@ -307,7 +309,7 @@ h1, h2 {
     4. MAIN
    ========== */
 .main__projects {
-    background: linear-gradient(180deg, rgba(75,136,162,1) 45%, rgba(37,38,39,1) 98%);
+    /* background: linear-gradient(180deg, rgba(75,136,162,1) 45%, rgba(37,38,39,1) 98%); */
 }
 
 /* 4.1 PROJECTS CONTAINER */
@@ -326,37 +328,65 @@ h1, h2 {
 .main__projects-cardcontainer {
     display: flex;
     flex-direction: column;
-    
 }
 
 .main__projects-card {
-    box-shadow: .2rem .2rem 2rem #000;
-    background-color: var(--grey);
-    border-radius: .5em;
-    margin-bottom: 1.5em;
+    position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
+    box-shadow: .2rem .2rem 2rem #000;
+    border-radius: 1rem;
+}
+
+/* 3.3 Image efects */
+.fade {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.middle {
+    position: absolute;
+    background-color: whitesmoke;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.main__projects-card:hover .fade {
+    opacity: 0.3;
+}
+
+.main__projects-card:hover .middle {
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 /* 4.3 PROJECT TEXT */
 .main__projects-card p {
+    margin: 1rem 0;
     text-align: center;
     font-weight: bold;
     font-variant: small-caps;
-    padding: 0 .1em;
 }
 
 .main__projects-card a {
     text-decoration: none;
-    color: #00769C;
-    transition: 0.5s;
-}
-
-.main__projects-card a:hover {
-    background-color: var(--lightblue);
     color: var(--white);
-    padding: 1rem;
-    border-radius: 1rem;
+    /* transition: 0.5s; */
+    padding: 1.5rem;
+    background-color: #00769C;
+    border-radius: 2rem;
 }
 
 /* 4.4 PROJECT BUTTON */
@@ -401,9 +431,6 @@ h1, h2 {
         justify-content: center;
     }
 
-    .main__projects-card:hover {
-        box-shadow: .3rem .3rem 3rem #000;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -413,7 +440,7 @@ h1, h2 {
     }
 
     .main__projects-card {
-        flex: 0 0 calc(25% - 1rem);
+        flex: 0 0 calc(35% - 1rem);
     }
 
     .main__projects-button {
@@ -509,7 +536,7 @@ h1, h2 {
 /* 5.2 CONTACT ICONS */
 .contact__section-icons {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 0;
     align-items: center;
     text-align: center;
