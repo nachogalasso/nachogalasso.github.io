@@ -204,9 +204,6 @@ h1, h2 {
 /* =============
     3. WELCOME
    ============= */
-.welcome__section {
-    /* background: linear-gradient(180deg, rgba(211,212,217,1) 45%, rgba(75,136,162,1) 98%); */
-}
 
 /* 3.1 INFO CONTAINER */
 .welcome__section-container {
@@ -308,9 +305,6 @@ h1, h2 {
 /* ==========
     4. MAIN
    ========== */
-.main__projects {
-    /* background: linear-gradient(180deg, rgba(75,136,162,1) 45%, rgba(37,38,39,1) 98%); */
-}
 
 /* 4.1 PROJECTS CONTAINER */
 .main__projects-container {
