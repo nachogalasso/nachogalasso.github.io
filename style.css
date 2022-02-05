@@ -215,11 +215,10 @@ h1, h2 {
 
 /* 3.2 PHOTO */
 .welcome__section-photo {
-    padding: 1em;
     margin: 2.5em 0;
     align-self: center;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 35%, rgba(9,9,121,1) 100%);
-    border-radius: 17% 83% 24% 76% / 61% 79% 21% 39%;
+    border-radius: 40% 82% 59% 62% / 74% 72% 51% 40%;
 }
 
 .welcome__section-photo img {
