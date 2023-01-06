@@ -36,13 +36,13 @@
     <meta property="og-title" content="Ignacio Galasso - Front-end Developer / Portfolio" />
     <meta property="og-type" content="website" />
     <meta property="og-url" content="https://myportfoliogalasso.vercel.app/" />
-    <meta property="og-image" content="https://pixabay.com/images/id-7701989/" />
+    <meta property="og-image" content="/assets/images/fotoOPGL.webp" />
     <meta property="og-description" content="This is my portfolio, here you con see my work. I update once a project is finished." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@galasso22">
     <meta name="twitter:title" content="Ignacio Galasso - Front-end Developer / Portfolio" />
     <meta name="twitter:description" content="This is my portfolio, here you con see my work. I update once a project is finished." />
-    <meta name="twitter:image" content="https://pixabay.com/images/id-7701989/" />
+    <meta name="twitter:image" content="/assets/images/fotoOPGL.webp" />
     <!-- FLAGS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
     <title>Portfolio - Ignacio M. Galasso</title>
@@ -55,10 +55,13 @@
         </div>
         <nav class="navbar">
             <ul class="navbar__list" id="navbar">
-                <li class="navbar__item"><i class="fa-solid fa-address-card"></i><a href="#welcome-section">About</a></li>
-                <li class="navbar__item"><i class="fa-solid fa-briefcase"></i><a href="#main-projects">Work</a></li>
-                <li class="navbar__item"><i class="fa-solid fa-comment"></i><a href="#contact-section">Contact</i></a></li>
-                <li class="navbar__item"><i class="fa-solid fa-keyboard"></i><a href="#tech-skills">Tech</i></a></li>
+                <li class="navbar__item"><i class="fa-solid fa-address-card"></i><a href="#welcome-section">Sobre mi</a></li>
+                <li class="navbar__item"><i class="fa-solid fa-briefcase"></i><a href="#main-projects">Proyectos</a></li>
+                <li class="navbar__item"><i class="fa-solid fa-comment"></i><a href="#contact-section">Contacto</i></a></li>
+                <div class="lang">
+                    <li class="flags"><a href="/index.html" title="English"><span class="fi fi-gb"></span></a></li>
+                    <li class="flags"><a href="/docs/indexesp.html" title="Spanish"><span class="fi fi-es"></span></a></li>
+                </div>
             </ul>
         </nav>
         <figure class="nav-logo" id="logo">
@@ -77,16 +80,16 @@
             <div class="welcome__section-name">
                 <h1>Hi! I´m Ignacio Galasso</h1>
                 <h2>Front-End Developer</h2>
-                <ul class="contact__section-icons" id="contact-section">
+                <ul class="contact__section-icons">
                     <li class="contact-item"><a href="https://www.linkedin.com/in/ignaciogalasso" target="_blank" rel="noreferrer" title="My Linkedin"><i class="fab fa-linkedin"></i></a></li>
                     <li class="contact-item"><a href="https://github.com/Nakio82" target="_blank" rel="noreferrer" title="Visit my repository" title="My Github"><i class="fab fa-github"></i></a></li>
                     <li class="contact-item"><a href="mailto:ignaciogalasso82@gmail.com" title="Send me an Email"><i class="fas fa-at"></i></a></li>
                 </ul>
             </div>
                 <section class="welcome__section-intro">
-                    <p>Allow me to tell you a little about myself. I am learning about Frontend development as a self-taught. I know HTML, CSS, and Javascript. Now I am learning VUE, NODE JS, and Python to be a Fullstack developer. I want to join a place that allows me to continue my professional development.</p>
-                    <p>Yes, my experience as a Frontend is indeed minor, but to say this is ignoring all my journey until today. My degree in Labor Relations allows me to contribute to recruiting personnel, training, or work environment. My background as a treasurer allows me to help with administration and accounting. Here is where I learned to manage staff. I have a hobby as a referee of American Football, where I learned teamwork, working under pressure, and dealing with people. In addition, I was in charge of the course for training new officers.</p>
-                    <p>So with all said, I propose you to know me. I am sure I can contribute to the daily work. Let´s start building projects together.</p>
+                    <p>Permítanme contarles un poco sobre mí. Estoy aprendiendo sobre el desarrollo de Frontend como autodidacta. Conozco HTML, CSS y Javascript. Ahora estoy aprendiendo VUE, NODE JS y Python con el fin de llegar a ser un desarrollador Fullstack. Quiero unirme a un lugar que me permita continuar mi desarrollo profesional.</p>
+                    <p>Sí, mi experiencia como Frontend no es mucha, pero decir esto es ignorar todo mi viaje hasta hoy. Tengo un título en Relaciones Laborales, el cual me permite contribuir en procesos de contratación de personal, formación o ambiente de trabajo. Mi experiencia como tesorero me permite ayudar con temas relacionados a la administración y la contabilidad. También en este rol aprendí a gestionar personal. Tengo un pasatiempo como árbitro del fútbol americano, en donde aprendí a trabajar en equipo, bajo presión y, a tratar con la gente. Además, estaba a cargo del curso de formación de nuevos oficiales.</p>
+                    <p>Con todo lo dicho, les propongo que me conozcan. Estoy seguro de que puedo contribuir al trabajo diario. Empecemos a construir proyectos juntos.</p>
                 </section>
             
         </div>
@@ -97,7 +100,7 @@
     <main class="main__projects" id="main-projects">
 
         <!-- MAIN - LOGOS START -->
-        <section class="main__projects-tech" id="tech-skills">
+        <section class="main__projects-tech">
             <div class="tech">
                 <img src="./assets/images/logos/html.webp" alt="HMTL_Logo" loading="lazy" class="img-logo">
                 <img src="./assets/images/logos/css.webp" alt="CSS_Logo" loading="lazy" class="img-logo">
@@ -110,27 +113,27 @@
             <ul class="skills">
                 <li class="skills_item">
                     <img src="./assets/images/logos/teamwork.webp" alt="Teamwork_Logo" loading="lazy" class="img-logo">
-                    <p>Teamwork</p>
+                    <p>Trabajo en Equipo</p>
                 </li>
                 <li class="skills_item">
                     <img src="./assets/images/logos/conflict.webp" alt="Conflict_Logo" loading="lazy" class="img-logo">
-                    <p>Conflit Resolution</p>
+                    <p>Resolución de Conflictos</p>
                 </li>
                 <li class="skills_item">
                     <img src="./assets/images/logos/communication.webp" alt="Communication_Logo" loading="lazy" class="img-logo">
-                    <p>Communication</p>
+                    <p>Comunicación</p>
                 </li>
                 <li class="skills_item">
                     <img src="./assets/images/logos/critical.webp" alt="Critical_Logo" loading="lazy" class="img-logo">
-                    <p>Critical Capacity</p>
+                    <p>Capacidad Crítica</p>
                 </li>
                 <li class="skills_item">
                     <img src="./assets/images/logos/flexibility.webp" alt="Flexibility_Logo" loading="lazy" class="img-logo">
-                    <p>Flexibility</p>
+                    <p>Flexibilidad</p>
                 </li>
                 <li class="skills_item">
                     <img src="./assets/images/logos/stress.webp" alt="Stress_Logo" loading="lazy" class="img-logo">
-                    <p>Stress Tolerance</p>
+                    <p>Tolerancia al Stress</p>
                 </li>
             </ul>
         </section>
@@ -139,7 +142,7 @@
         
         <!-- PROJECTS CONTAINER -->
         <section class="main__projects-container">
-            <h2 class="main__projects-title">Here you can see my work</h2>
+            <h2 class="main__projects-title">Aquí pueden ver mis proyectos</h2>
             <div class="main__projects-cardcontainer">
             
                 <!-- PROJECTS DEPLOY START
@@ -165,15 +168,15 @@
             </div>
 
             <!-- MODAL START -->
-            <button class="main__projects-button" id="modal-btn">Load More<i class="fas fa-chevron-circle-right"></i></button>
+            <button class="main__projects-button" id="modal-btn">Ver más<i class="fas fa-chevron-circle-right"></i></button>
             <div id="myModal" class="modal-container">
                 <div class="modal-content">
                     <span class="close-btn">&times;</span>
                     <figure class="modal-card">
-                        <img src="/assets/images/underconstruction.webp" alt="Underconstruction_Logo">
+                        <img src="/assets/images/Underconstruction.webp" alt="Underconstruction_Logo">
                         <!-- <a href="#" title="Stay tuned!! Bookmark this page"></a> -->
-                        <p>More projects coming soon...</p>
-                        <p>Stay Tuned!</p>
+                        <p>Más proyectos en breve...</p>
+                        <p>Estén atentos ;)</p>
                     </figure>
                 </div>
             </div>
@@ -184,9 +187,9 @@
 <!-- MAIN - PROJECTS END -->
 
 <!-- SECTION - CONTACT START -->
-    <section class="contact__section">
+    <section class="contact__section" id="contact-section">
         <div class="contact__section-container">
-            <h2 class="contact__section-title">Let´s get in touch and create things together</h2>
+            <h2 class="contact__section-title">Estemos en contacto, para crear cosas juntos</h2>
         </div>
     </section>
 <!-- SECTION - CONTACT END  -->
