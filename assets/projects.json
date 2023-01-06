@@ -1,0 +1,67 @@
+{
+   "projects": [
+      {
+         "title": "Game Card",
+         "tech": "HTML - CSS - JS",
+         "description": "This is my main project. My motivation to continue to become a fullstack dev. It´s a gamecard from my hobby. I want to develop a PWA with VUE, to help on the game day where all argentine referee´s can work together.",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/gamecard/index.html",
+         "photo": "/assets/images/gamecard.webp"
+      },
+      {
+         "title": "Faarg Landinpage",
+         "tech": "HTML - CSS - JS",
+         "description": "A landing page to recruit new officials. At the time, the registration form is from Google but, I want to use the backend, so I am studying for it.",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/gamecard/index.html",
+         "photo": "/assets/images/faarg_landingpage.webp"
+      },
+      {
+         "title": "Survey Page",
+         "tech": "HTML - CSS - JS",
+         "description": "This is a simple survey page where I (need some fixes) use Javascript to validate the form data. Next, I want to use this page with the landing page and collect the data with Node JS or Python.",
+         "link": "https://projects-ashen.vercel.app/docs/survey_page/index.html",
+         "photo": "/assets/images/pagesurvey.webp"
+      },
+      {
+         "title": "Visa Login Page",
+         "tech": "HTML - CSS - JS",
+         "description": "Responsive web for visa home. If you use your mobile to access your visa home, you will see that the web doesn´t adapt to small screens",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/visa/index.html",
+         "photo": "/assets/images/visa.webp"
+      },
+      {
+         "title": "Florencia´s Portfolio",
+         "tech": "HTML - CSS - JS",
+         "description": "One of the things I like to do while practicing web development is to replicate other sites and try to do the same. Then I think about what changes I can make to improve the web. Here is an example, first the <span><a href='https://florenciauruena.myportfolio.com/' target='_blank' rel='noopener noreferrer'>Real Portfolio</a></span>, and then comes mine with the changes",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/pract05/index.html",
+         "photo": "/assets/images/florencia.webp"
+      },
+      {
+         "title": "La Cocina de Juan",
+         "tech": "HTML - CSS - JS",
+         "description": "Practice project, especially to understand forms applied to reservations and online orders",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/ActPract04/index_ac4.html",
+         "photo": "/assets/images/cocina_juan.webp"
+      },
+      {
+         "title": "Vivero Aguacate",
+         "tech": "HTML - CSS - JS",
+         "description": "Another Practice project, especially for responsive web design and e-commerce site. It has a cart and works with the localStorage. The e-commerce is from freecodecamp",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/tp_vivero/index.html",
+         "photo": "/assets/images/aguacate.webp"
+      },
+      {
+         "title": "Amazon Library",
+         "tech": "HTML - CSS - JS",
+         "description": "I try to replicate Amazon Prime web page. The trailer movies are displayed on a modal, they all work now!! (This was my first practice project)",
+         "link": "https://amazonmovielibrarypractice.netlify.app/",
+         "photo": "/assets/images/amazon.webp"
+      },
+      {
+         "title": "Gradient Generator",
+         "tech": "HTML - CSS - JS",
+         "description": "I know there are pages to generate gradients, but I wanted to create one by myself, I wanted to challenge myself by creating my own code.",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/grad_generator_js/index.html",
+         "photo": "/assets/images/grad_gen.webp"
+      }
+   ]
+}

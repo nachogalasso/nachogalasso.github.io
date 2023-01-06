@@ -1,6 +1,4 @@
-/* =========
-     INDEX
-   ========= 
+/* ===== INDEX ===== 
 1. RESET values - (37)
 2. NAVIGATION BAR - (77)
     2.1 HEADER ON TOP - (80)
@@ -33,9 +31,7 @@
     6.2 FOOTER MQ - (565)
 
 
-/* ===========
-    1. RESET
-   =========== */
+/* ===== 1. RESET ===== */
 :root {
     --title: 'Ubuntu', Arial, Helvetica, sans-serif;
     --text: 'Lora' , Arial, Helvetica, serif;
@@ -68,7 +64,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
@@ -76,18 +72,15 @@ img {
 
 p, a {
     font-family: var(--text);
-    font-size: 2rem;
 }
 
 h1, h2 {
     font-family: var(--title);
 }
 
-/* ============
-    2. NAVBAR
-   ============ */
+/* ===== 2. NAVBAR START ===== */
 
-/* 2.1 HEADER ON TOP */
+/* 2.1 HEADER */
 .header-sticky {
     display: flex;
     justify-content: space-between;
@@ -101,25 +94,34 @@ h1, h2 {
     box-shadow: -.5rem .3rem 3rem var(--black);
 }
 
-/* 2.2 NAVBAR */
+/* Header on right side */
+@media screen and (min-width: 1024px) {
+    .header-sticky {
+        flex-direction: column;
+       align-items: flex-end;
+        left: 200rem;
+        width: 11rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+}
+/* 2.1 HEADER END */
+
+/* 2.2 NAVBAR START */
 .navbar {
     position: relative;
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
+    width: 100%;
 }
 
 .navbar__list {
     display: flex;
     padding: 0;
-    transform: translateX(-250%);
+    transform: translateX(-300%);
     transition: transform .3s;
     position: absolute;
-}
-
-.show {
-    transform: translateX(0);
-    position: relative;
-    margin: 0;
 }
 
 .navbar__item {
@@ -133,20 +135,42 @@ h1, h2 {
     text-decoration: none;
     font-size: 2em;
     color: #fff;
+    margin: 0 .2rem;
 }
 
-.navbar__item:hover, 
+.navbar__item  i {
+    display: none;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.flags {
+    margin: 0 .5rem;
+    font-size: 2rem;
+}
+
 .navbar__item a:hover {
     color: var(--black);
 }
 
-/* 2.3 NAVBAR MEDIA QUERYS */
+.show {
+    display: flex;
+    justify-content: space-around;
+    transform: translateX(0);
+    position: relative;
+}
+
+/* 2.3 NAVBAR ITEMS MEDIA QUERYS */
 @media screen and (min-width: 768px) {
     .navbar {
         display: flex;
         align-items: center;
+        padding: 0;
     }
-
 
     .navbar__list {
         position: relative;
@@ -162,21 +186,74 @@ h1, h2 {
 }
 
 @media screen and (min-width: 1024px) {
-    .navbar__item a {
-        font-size: 2.7em;
+    .navbar {
+        flex-direction: column;
+        position: absolute;
+        top: 12rem;
     }
 
+    .navbar__list {
+        flex-direction: column;
+        width: 16rem;
+        transform: translateX(50%);
+    }
+
+    .navbar__item {
+        margin: .5rem 0;
+        padding: .5rem 1rem;
+        background-color: rgba(187, 10, 33, .7);
+        border-radius: 1rem;
+        width: 100%;
+    }
+
+    .navbar__item:hover {
+        cursor: pointer;
+        transform: translateX(-50%);
+        transition: transform .5s;
+    }
+
+    .navbar__item a {
+        margin: 0;
+        font-size: 2.7em;
+        transform: translateX(30%);
+    }
+
+    .navbar__item:hover > a {
+        transform: translateX(-5%);
+        transition: transform .5s;
+    }
+
+    .navbar__item i {
+        display: block;
+        font-size: 2em;
+        color: #fff;
+        margin-right: 1rem;
+    }
+
+     .lang {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    .flags {
+        margin: .5rem 0;
+    }
 }
 
 /* 2.4 NAVBAR LOGO AND BURGER BUTTON*/
 .nav-logo {
-    display: flex;
     margin: 0;
-    padding: 1rem;
+    padding: .5rem;
+}
+
+.nav-logo img {
+    width: 7rem;
+    height: 7rem;
 }
 
 .toggle-menu {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--white);
     align-self: center;
     cursor: pointer;
@@ -201,33 +278,162 @@ h1, h2 {
 
 }
 
-/* =============
-    3. WELCOME
-   ============= */
+@media screen and (min-width: 1024px) {
+    .hide {
+        transform: translateY(-115%);
+        transition: transform .3s;
+    }
+
+    .nav-logo {
+        order: -1;
+    }
+}
+
+/* ===== 2. NAVBAR START ===== */
+
+/* ===== 3. WELCOME START ===== */
 
 /* 3.1 INFO CONTAINER */
+.welcome__section {
+    position: relative;
+}
+
 .welcome__section-container {
-    margin: 0 auto;
-    width: 32rem;
+   margin: 1rem auto;
+    width: 40rem;
     display: flex;
     flex-direction: column;
 }
 
+/* Info MQ */
+@media screen and (min-width: 1024px) {
+     .welcome__section {
+        margin: 0 auto;
+        width: 110rem;
+    }
+
+    .curved-bg {
+        position: absolute;
+        width: 100%;
+        height: 30rem;
+        background: #00769c;
+        z-index: -1;
+    }
+
+    .curved-bg::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 92% 38%;
+    }
+
+    .curved-bg::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 82% 32%;
+    }
+
+    .curved-bg::before {
+        width: 60%;
+        height: 110%;
+        background-color: #fff;
+        right: -1.5%;
+        top: 55%;
+    }
+
+    .curved-bg::after {
+        width: 52%;
+        height: 96%;
+        background-color: #00769C;
+        left: 0%;
+        top: 34%;
+    }
+}
+
 /* 3.2 PHOTO */
 .welcome__section-photo {
-    margin: 2.5em 0;
     align-self: center;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 35%, rgba(9,9,121,1) 100%);
     border-radius: 40% 82% 59% 62% / 74% 72% 51% 40%;
 }
 
 .welcome__section-photo img {
-    border-radius: 2rem;
+    border-radius: 0 0 4rem 10rem;
     filter: drop-shadow(.1rem .1rem 3rem black);
 }
 
-/* 3.3 TEXT STYLE */
+/* 3.3 CONTACT ICONS */
+.contact__section-icons {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.contact-item {
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+.contact-item a {
+    display: block;
+    text-decoration: none;
+    font-family: var(--text);
+    color: #000;
+    font-size: 2em;
+    padding: .5em 0;
+}
+
+.contact-item a:hover {
+    color: var(--lightblue);
+}
+
+.fas, .fab {
+    padding-right: .5em;
+    padding-left: .5em;
+}
+
+/* Contact MQ */
+@media screen and (min-width: 768px) {
+    
+    .contact__section-container {
+        width: 50%;
+    }
+
+    .contact__section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-item a {
+        font-size: 2.8rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .welcome__section-photo {
+        background: none;
+        border-radius: none;
+}
+    
+    .contact__section-container {
+        width: 75%;
+    }
+
+    .contact__section-title {
+        font-size: 2rem;
+    }
+
+    .contact-item a {
+        font-size: 3.2rem;
+    }
+
+}
+
+/* 3.4 TEXT STYLE */
 .welcome__section-name {
+    margin: 1.5rem 0;
     text-align: center;
 }
 
@@ -240,28 +446,46 @@ h1, h2 {
     margin: .5em 0;
 }
 
-.welcome__section-name p {
-    text-align: left;
+
+/* 3.5 INTRO SECTION */
+.welcome__section-intro {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.welcome__section-intro::before {
+    content: "";
+    width: 8rem;
+    height: .5rem;
+    background-color: #00769C;
+}
+
+.welcome__section-intro p {
+    margin:  .5rem 0;
     line-height: 1.5;
-    hyphens: auto;
+    font-size: 1.8rem;
+    text-indent: 4.5rem;
 }
 
 
-/* 3.4 WELCOME MEDIA QUERYS */
+/*  Welcome MQ */
 @media screen and (min-width: 768px) {
     
     .welcome__section-container {
-        width: 100%;
-        padding: 2rem 1rem;
+        width: 70rem;
+        padding: 2rem;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .welcome__section-photo {
         margin: 0 1rem;
-        flex: 0 0 calc(50% - 1rem);
+        flex: 0 0 calc(40% - 1rem);
     }
 
     .welcome__section-name {
+        margin: 0 auto;
         padding: .5rem;
         align-self: center;
     }
@@ -270,12 +494,17 @@ h1, h2 {
         font-size: 3.2rem;
     }
 
+    .welcome__section-intro {
+        padding: 0;
+        margin-top: 3rem;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
     
     .welcome__section-container {
-        height: 100vh;
+        width: 98%;
     }
 
     .welcome__section-photo {
@@ -284,27 +513,60 @@ h1, h2 {
         align-self: center;
     }
 
+    .welcome__section-name {
+        margin-right: 2rem;
+    }
+
     .welcome__section-name h1 {
         font-size: 4.5rem;
     }
 
     .welcome__section-name h2 {
         font-size: 3rem;
+        padding: 2.8rem 0 0 2rem;
     }
 
     .welcome__section-name p {
         font-size: 2.2rem;
         padding: 0 3rem;
         line-height: 2;
-        hyphens: none;
+    }
+
+    .welcome__section-intro {
+        margin-top: 5rem;
     }
 
 }
 
-/* ===== 4. MAIN ===== */
+/* ===== 3. WELCOME END ===== */
 
-/* 4.1 LOGOS START */
+/* ===== 4. MAIN START ===== */
+.main__projects {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    .main__projects {
+        margin: 0 auto;
+        width: 110rem;
+    }
+}
+
+/* 4.1 LOGOS */
 .main__projects-tech {
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-logo {
+    width: auto;
+    /* height: auto; */
+}
+
+.tech {
     margin: 1.5rem 0;
     padding: 0 1rem;
     display: flex;
@@ -312,21 +574,58 @@ h1, h2 {
     height: 5rem;
 }
 
-.img-logo {
-    width: auto;
-    height: auto;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
 }
 
+.skills_item {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.skills_item p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Logos MQ */
 @media screen and (min-width: 768px) {
 
-    .main__projects-tech {
+    .tech {
         height: 7rem;
     }
 
-}
-/* 4.1 LOGOS END */
+    .skills {
+        width: 50rem;
+        align-self: center;
+    }
 
-/* 4.1 PROJECTS CONTAINER */
+}
+
+@media screen and (min-width: 1024px) {
+    .main__projects-tech {
+        flex-direction: row;
+    }
+
+    .tech {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .skills {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .skills img {
+        height: 9rem;
+    }
+}
+
+/* 4.2 PROJECTS CONTAINER */
 .main__projects-container {
     margin: 0 auto;
     display: flex;
@@ -338,80 +637,84 @@ h1, h2 {
     font-size: 2.2em;
 }
 
-/* 4.2 PROJECTS CARDS */
+/* 4.3 PROJECTS CARDS */
 .main__projects-cardcontainer {
+    /* display: flex;
+    flex-direction: column;
+    gap: 2rem; */
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 110rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+.card_container {
     display: flex;
     flex-direction: column;
+}
+
+.card_container:hover {
+    box-shadow: .2rem .2rem 2rem #000;
+    border-radius: 1rem;
+    transition: 0.5s;
 }
 
 .main__projects-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-    box-shadow: .2rem .2rem 2rem #000;
-    border-radius: 1rem;
-    height: 40rem;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem 1rem 0 0;
+    height: 35rem;
     overflow: hidden;
-}
-
-/* 3.3 Image efects */
-.fade {
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    border-radius: 1rem;
 }
 
 .middle {
-    position: absolute;
-    background-color: whitesmoke;
-    overflow: hidden;
-    width: 80%;
-    height: 80%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    transition: .5s ease;
-    -webkit-transition: .5s ease;
+    background-color: rgba(99, 248, 251, 0.6);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: .8rem;
-    top: 8%;
-    left: 8%;
+    align-items: center;
+    padding: 1.8rem;
+    font-size: 1.8rem;
+    border-radius: 0 0 1rem 1rem;
+    height: max-content;
 }
 
-.middle p, a {
-    font-size: 1.5rem;
+/* Project cards MQ */
+@media screen and (min-width: 768px) {
+
+     .main__projects-title {
+        font-size: 2.8em;
+    }
+
 }
 
-.main__projects-card:hover .fade {
-    opacity: 0.3;
-}
-
-.main__projects-card:hover .middle {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-/* 4.3 PROJECT TEXT */
-.main__projects-card p {
-    margin: 1rem 0;
-    text-align: center;
+/* 4.4 PROJECT TEXT */
+.middle p {
+    margin: 0 0 1.5rem;
     font-weight: bold;
     font-variant: small-caps;
 }
 
-.main__projects-card a {
+.middle a {
     text-decoration: none;
+    cursor: pointer;
     color: var(--white);
-    /* transition: 0.5s; */
     padding: .5rem 1rem; 
     background-color: #00769C;
     border-radius: 2rem;
 }
 
-/* 4.4 PROJECT BUTTON */
+.middle span > a {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: underline red dashed;
+}
+
+/* 4.5 PROJECT BUTTON */
 .main__projects-button {
     background-color: var(--grey);
     color: #00769C;
@@ -432,29 +735,7 @@ h1, h2 {
     box-shadow: .2em .2em 2rem var(--grey);
 }
 
-/* 4.5 PROJECT MEDIA QUERYS */
-@media screen and (min-width: 768px) {
-    .main__projects-title {
-        font-size: 2.8em;
-    }
-
-    .main__projects-cardcontainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .main__projects-card {
-        flex: 0 0 calc(40% - 1rem);
-        display: flex;
-        height: 40rem;
-        justify-content: center;
-    }
-
-}
-
+/* Project MQ */
 @media screen and (min-width: 1024px) {
     
     .main__projects-title {
@@ -462,8 +743,7 @@ h1, h2 {
     }
 
     .main__projects-card {
-        flex: 0 0 calc(40% - 1rem);
-        height: 50rem;
+        height: 40rem;
     }
 
     .middle p, a {
@@ -497,7 +777,8 @@ h1, h2 {
 
 /* 4.7 MODAL BUTTON */
 .close-btn {
-    font-size: 2.5rem;
+    cursor: pointer;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--grey);
     align-self: flex-end;
@@ -518,14 +799,16 @@ h1, h2 {
 }
 .modal-card img {
     border-radius: 1rem;
+    width: 30rem;
 }
 
 .modal-card p {
+    font-size: 1.5rem;
     color: var(--white);
     text-shadow: 2rem 2rem 2rem var(--black);
 }
 
-/* 4.9 MODAL MEDIA QUERY */
+/* Modal MQ */
 @media screen and (min-width: 768px) {
 
     .modal-content {
@@ -533,19 +816,18 @@ h1, h2 {
     }
 
     .modal-card img {
-        width: 45%;
+        width: 40%;
     }
 
     .close-btn {
-        font-size: 3.2rem;
-        margin: 0 15% 2%;
+        font-size: 4rem;
+        margin: 2% 10%;
     }
 
 }
+/* ===== 4. MAIN END ===== */
 
-/* =============
-    5. CONTACT
-   ============= */
+/* ===== 5. CONTACT START ===== */
 .contact__section {
     background-color: var(--black);
     color: var(--white);
@@ -556,78 +838,12 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 32rem;
     margin: 0 auto;
 }
+/* ===== 5. CONTACT END ===== */
 
-/* 5.2 CONTACT ICONS */
-.contact__section-icons {
-    display: flex;
-    /* flex-wrap: wrap; */
-    padding: 0;
-    align-items: center;
-    text-align: center;
-}
 
-/* 5.3 CONTACT STYLE */
-.contact-item {
-    flex-basis: calc( 50% - 1rem);
-    list-style-type: none;
-}
-
-.contact-item a {
-    display: block;
-    text-decoration: none;
-    font-family: var(--text);
-    color: #fff;
-    font-size: 1.3em;
-    padding: .5em 0;
-}
-
-.contact-item a:hover {
-    color: var(--lightblue);
-}
-
-.fas, .fab {
-    padding-right: .5em;
-    padding-left: .5em;
-}
-
-/* 5.4 CONTACT MEDIA QUERY */
-@media screen and (min-width: 768px) {
-    
-    .contact__section-container {
-        width: 50%;
-    }
-    .contact__section-title {
-        font-size: 1.8rem;
-    }
-
-    .contact-item a {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media screen and (min-width: 1024px) {
-    
-    .contact__section-container {
-        width: 75%;
-    }
-
-    .contact__section-title {
-        font-size: 2rem;
-    }
-
-    .contact-item a {
-        font-size: 1.7rem;
-    }
-
-}
-
-/* ============
-    6. FOOTER
-   ============ */
+/* ===== 6. FOOTER START===== */
 
 /* 6.1 FOOTER SECTION */
 .footer__section {
@@ -640,7 +856,7 @@ h1, h2 {
     padding-right: 1em;
 }
 
-/* 6.2 FOOTER MEDIA QUERYS */
+/* Footer MQ */
 @media screen and (min-width: 1024px) {
 
     .footer__section p {
@@ -648,3 +864,4 @@ h1, h2 {
     }
 
 }
+/* ===== 6. FOOTER END===== */
