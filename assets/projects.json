@@ -22,6 +22,13 @@
          "photo": "/assets/images/pagesurvey.webp"
       },
       {
+         "title": "Christmas APP",
+         "tech": "HTML - CSS - JS",
+         "description": "This is an advent project, the idea was to create a Christmas app, in which the user can enter their list of gifts, edit or delete if necessary. Print the list to purchase the gifts.",
+         "link": "https://codo-a-codo-psi.vercel.app/docs/app_navidad/index.html",
+         "photo": "/assets/images/christmasapp.webp"
+      },
+      {
          "title": "Visa Login Page",
          "tech": "HTML - CSS - JS",
          "description": "Responsive web for visa home. If you use your mobile to access your visa home, you will see that the web doesn´t adapt to small screens",
