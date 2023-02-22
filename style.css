@@ -70,11 +70,11 @@ img {
     object-fit: cover;
 }
 
-p, a {
+p, a, li {
     font-family: var(--text);
 }
 
-h1, h2 {
+h1, h2, h4, h5 {
     font-family: var(--title);
 }
 
@@ -173,6 +173,7 @@ h1, h2 {
     }
 
     .navbar__list {
+        margin: 0;
         position: relative;
         transform: translateX(0);
         transition: transform .3s;
@@ -426,7 +427,7 @@ h1, h2 {
     }
 
     .contact-item a {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
     }
 
 }
@@ -464,7 +465,7 @@ h1, h2 {
 .welcome__section-intro p {
     margin:  .5rem 0;
     line-height: 1.5;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-indent: 4.5rem;
 }
 
@@ -596,7 +597,7 @@ h1, h2 {
 @media screen and (min-width: 768px) {
 
     .tech {
-        height: 7rem;
+        height: 6.5rem;
     }
 
     .skills {
@@ -621,7 +622,7 @@ h1, h2 {
     }
 
     .skills img {
-        height: 9rem;
+        height: 8rem;
     }
 }
 
@@ -634,7 +635,7 @@ h1, h2 {
 }
 
 .main__projects-title {
-    font-size: 2.2em;
+    font-size: 2.5rem;
 }
 
 /* 4.3 PROJECTS CARDS */
@@ -647,7 +648,7 @@ h1, h2 {
     max-width: 110rem;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     column-gap: 1.5rem;
     row-gap: 2rem;
     grid-auto-flow: dense;
@@ -686,10 +687,16 @@ h1, h2 {
 /* Project cards MQ */
 @media screen and (min-width: 768px) {
 
-     .main__projects-title {
-        font-size: 2.8em;
+    .main__projects-title {
+        align-self: flex-start;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .main__projects-title {
+        font-size: 3rem;
+    }
 }
 
 /* 4.4 PROJECT TEXT */
@@ -737,10 +744,6 @@ h1, h2 {
 
 /* Project MQ */
 @media screen and (min-width: 1024px) {
-    
-    .main__projects-title {
-        font-size: 4rem;
-    }
 
     .main__projects-card {
         height: 40rem;
@@ -824,6 +827,61 @@ h1, h2 {
         margin: 2% 10%;
     }
 
+}
+
+/* 4.9 CAREER EXPERIENCE */
+.career-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 110rem;
+    margin: 0 auto 2rem;
+}
+
+.career-info h4 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.career-info h5 {
+    margin: 0;
+    color: #8c8c8c;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.career__task-list {
+    margin: .5rem;
+    padding-left: 2rem;
+}
+
+.task-item {
+    font-size: 1.3rem;
+    padding: .5rem 0;
+}
+
+.career-info p {
+    margin: .5rem 0 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* CAREER MQ */
+@media screen and (min-width: 1024px) {
+    .career-info h4 {
+        font-size: 2rem;
+    }
+
+    .career-info h5 {
+        font-size: 1.7rem;
+    }
+
+    .task-item, 
+    .career-info p {
+        font-size: 1.5rem;
+    }
 }
 /* ===== 4. MAIN END ===== */
 
