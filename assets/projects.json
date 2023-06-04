@@ -1,11 +1,11 @@
 {
    "projects": [
       {
-         "title": "Game Card",
+         "title": "Property Advisors",
          "tech": "HTML - CSS - JS",
-         "description": "This is my main project. My motivation to continue to become a fullstack dev. It´s a gamecard from my hobby. I want to develop a PWA with VUE, to help on the game day where all argentine referee´s can work together.",
+         "description": "This is a simple landing page, with responsive design, a modal, a carousel. and more. It´s designed to practice a responsive design, JS and CSS",
          "link": "https://codo-a-codo-psi.vercel.app/docs/gamecard/index.html",
-         "photo": "/assets/images/gamecard.webp"
+         "photo": "/assets/images/pp_prop_ad.webp"
       },
       {
          "title": "Faarg Landinpage",
