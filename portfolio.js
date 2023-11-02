@@ -5,7 +5,21 @@ const mainLogo = document.getElementById('logo');
 const modal = document.getElementById('myModal');
 const openModal = document.getElementById('modal-btn');
 const closeModal = document.getElementsByClassName('close-btn')[0];
-const projectContainer = document.querySelector('.main__projects-cardcontainer');
+const projectContainer = document.querySelector('.hidden');
+const projectCards = document.querySelector('.main__projects-cardcontainer');
+const navItem = document.querySelectorAll('.navbar__item');
+const daContainer = document.querySelector('.main__da-container');
+
+
+navItem[1].addEventListener('click', () => {
+    daContainer.classList.replace('hidden', '.main__da-container');
+    projectContainer.classList.replace('main__projects-container', 'hidden');
+});
+
+navItem[2].addEventListener('click', () => {
+    daContainer.classList.replace('main__da-container', 'hidden');
+    projectContainer.classList.replace('hidden', 'main__projects-container');
+})
 
 /* Calling the events */
 iconMenu.addEventListener('click', () => {
@@ -38,7 +52,7 @@ async function getProjects() {
         let result = await fetch('./assets/projects.json');
         let data = await result.json()
         let projects = await data.projects;
-        console.log(projects)
+        // console.log(projects)
         projects = projects.map(item => {
             const title = item.title;
             const description = item.description;
@@ -73,7 +87,7 @@ function displayProjects(card) {
             </div>
         </article>`;
     });
-    projectContainer.innerHTML = fragment;
+    projectCards.innerHTML = fragment;
 }
 
 // displayProjects()
