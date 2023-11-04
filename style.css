@@ -524,10 +524,6 @@ h1, h2, h4, h5 {
         align-self: center;
     }
 
-    .welcome__section-name {
-        margin-right: 2rem;
-    }
-
     .welcome__section-name h1 {
         font-size: 4.5rem;
     }
@@ -564,25 +560,6 @@ h1, h2, h4, h5 {
     }
 }
 
-/* .da_container {
-    margin: 1rem auto;
-    width: 40rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-
-@media screen and (min-width: 768px) {
-    
-    .da_container {
-        width: 65rem;
-    }
-
-
-} */
-
 /* 4.1 LOGOS */
 .main__projects-tech,
 .career-skills {
@@ -592,7 +569,6 @@ h1, h2, h4, h5 {
 
 .img-logo {
     width: auto;
-    /* height: auto; */
 }
 
 .tech {
@@ -657,9 +633,6 @@ h1, h2, h4, h5 {
 /* 4.3 PROJECTS CARDS */
 .main__projects-cardcontainer,
 .da_container {
-    /* display: flex;
-    flex-direction: column;
-    gap: 2rem; */
     width: 90vw;
     margin: 0 auto;
     max-width: 110rem;
