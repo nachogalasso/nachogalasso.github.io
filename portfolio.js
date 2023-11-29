@@ -8,17 +8,15 @@ const closeModal = document.getElementsByClassName('close-btn')[0];
 const projectContainer = document.querySelector('.hidden');
 const projectCards = document.querySelector('.main__projects-cardcontainer');
 const navItem = document.querySelectorAll('.navbar__item');
-const daContainer = document.querySelector('.main__da-container');
+const closeContainer = document.querySelector('.closeBtn')
 
-
-navItem[1].addEventListener('click', () => {
-    daContainer.classList.replace('hidden', '.main__da-container');
-    projectContainer.classList.replace('main__projects-container', 'hidden');
-});
-
+// Project Container
 navItem[2].addEventListener('click', () => {
-    daContainer.classList.replace('main__da-container', 'hidden');
     projectContainer.classList.replace('hidden', 'main__projects-container');
+})
+
+closeContainer.addEventListener('click', () => {
+    projectContainer.classList.replace('main__projects-container', 'hidden');
 })
 
 /* Calling the events */
