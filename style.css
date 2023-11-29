@@ -103,7 +103,7 @@ h1, h2, h4, h5 {
        align-items: flex-end;
         left: 200rem;
         width: 11rem;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0);
         box-shadow: none;
         backdrop-filter: none;
     }
@@ -576,7 +576,7 @@ h1, h2, h4, h5 {
 
 /* 4.2 PROJECTS CONTAINER */
 .main__projects-container {
-    margin: 0 auto;
+    margin: 1.5rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -584,6 +584,20 @@ h1, h2, h4, h5 {
 
 .main__projects-title {
     font-size: 2.5rem;
+}
+
+.closeBtn {
+    align-self: flex-end;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    color: var(--red);
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: var(--green);
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 /* 4.3 PROJECTS CARDS */
