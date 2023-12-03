@@ -1,10 +1,10 @@
 /* ===== INDEX ===== 
-1. RESET values - (37)
-2. NAVIGATION BAR - (77)
-    2.1 HEADER ON TOP - (80)
-    2.2 NAVBAR - (93)
-    2.3 NAVBAR MQ - (133)
-    2.4 NAVBAR LOGO / BURGUER BUTTON - (161)
+1. RESET values - (35)
+2. NAVIGATION BAR - (82)
+    2.1 HEADER ON TOP - (84)
+    2.2 NAVBAR - (112)
+    2.3 NAVBAR MQ - (171)
+    2.4 NAVBAR LOGO / BURGUER BUTTON - (249)
     2.5 NAVAR LOG MQ - (184)
 3. WELCOME SECTION - (195)
     3.1 INFO CONTAINER - (201)
@@ -62,7 +62,7 @@ html:focus-within {
 body {
     margin: 0;
     padding: 0;
-    
+    background-color: #ececec;
 }
 
 img {
@@ -331,7 +331,7 @@ h1, h2, h4, h5 {
 
 .welcome__section-photo img {
     border-radius: 30%;
-    filter: drop-shadow(.1rem .1rem 1.5rem black);
+    filter: drop-shadow(.1rem .1rem .5rem rgb(54, 54, 54));
 }
 
 /* 3.3 CONTACT ICONS */
@@ -813,20 +813,19 @@ h1, h2, h4, h5 {
 }
 
 .career-info h5 {
-    margin: 0;
-    color: #8c8c8c;
+    margin: .5rem 0;
+    color: var(--green);
     font-size: 1.5rem;
     font-style: italic;
 }
 
 .career__task-list {
     margin: .5rem;
-    padding-left: 2rem;
 }
 
 .task-item {
     font-size: 1.3rem;
-    padding: .5rem 0;
+    padding: 1rem 0;
 }
 
 .career-info p {
