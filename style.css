@@ -150,9 +150,16 @@ h1, h2, h4, h5 {
     list-style-type: none;
 }
 
-.flags {
-    margin: 0 .5rem;
-    font-size: 2rem;
+.flag {
+    margin: 0;
+    padding: .2rem 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: -2.5rem;
+}
+
+.flag img {
+    border-radius: 50%;
 }
 
 .navbar__item a:hover {
@@ -242,9 +249,10 @@ h1, h2, h4, h5 {
         align-self: flex-start;
     }
 
-    .flags {
+    /* .flag {
+        
         margin: .5rem 0;
-    }
+    } */
 }
 
 /* 2.4 NAVBAR LOGO AND BURGER BUTTON*/
@@ -435,6 +443,10 @@ h1, h2, h4, h5 {
     text-indent: 4.5rem;
 }
 
+.pitch {
+    margin: 2rem auto 0;
+    width: 37rem;
+}
 
 /*  Welcome MQ */
 @media screen and (min-width: 768px) {
@@ -464,6 +476,10 @@ h1, h2, h4, h5 {
     .welcome__section-intro {
         padding: 0;
         margin-top: 3rem;
+    }
+
+    .pitch {
+        width: 56rem;
     }
 
 }
