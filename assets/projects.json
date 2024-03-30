@@ -29,13 +29,6 @@
          "photo": "/assets/images/christmasapp.webp"
       },
       {
-         "title": "Visa Login Page",
-         "tech": "HTML - CSS - JS",
-         "description": "Responsive web for visa home. If you use your mobile to access your visa home, you will see that the web doesn´t adapt to small screens",
-         "link": "https://codo-a-codo-psi.vercel.app/docs/visa/index.html",
-         "photo": "/assets/images/visa.webp"
-      },
-      {
          "title": "Florencia´s Portfolio",
          "tech": "HTML - CSS - JS",
          "description": "One of the things I like to do while practicing web development is to replicate other sites and try to do the same. Then I think about what changes I can make to improve the web. Here is an example, first the <span><a href='https://florenciauruena.myportfolio.com/' target='_blank' rel='noopener noreferrer'>Real Portfolio</a></span>, and then comes mine with the changes",
