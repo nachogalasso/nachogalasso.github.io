@@ -414,6 +414,7 @@ h1, h2, h4, h5 {
     font-size: 2.8em;
     margin: 0;
 }
+
 .welcome__section-name h2 {
     font-size: 2.2em;
     margin: .5em 0;
@@ -448,6 +449,7 @@ h1, h2, h4, h5 {
 }
 
 /*  Welcome MQ */
+
 @media screen and (min-width: 768px) {
     
     .welcome__section-container {
@@ -470,6 +472,10 @@ h1, h2, h4, h5 {
 
     .welcome__section-name h1 {
         font-size: 3.2rem;
+    }
+
+    .welcome__section-name h2 {
+        font-size: 1.5em;
     }
 
     .welcome__section-intro {
@@ -499,9 +505,14 @@ h1, h2, h4, h5 {
         font-size: 4.5rem;
     }
 
-    .welcome__section-name h2 {
+    /* .welcome__section-name h2 {
         font-size: 3rem;
         padding: 2.8rem 0 0 2rem;
+    } */
+
+    .welcome__section-name h2 {
+        font-size: 2.2em;
+        margin: .5em 0;
     }
 
     .welcome__section-name p {
